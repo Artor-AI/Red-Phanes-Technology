@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 205 45% 97%;
+    --panel: 208 50% 93%;
+    --accent-soft: 208 55% 90%;
+    --foreground: 220 20% 10%;
+    --muted-foreground: 218 15% 55%;
+    --border: 208 35% 87%;
+    --primary: 208 55% 41%;
+    --primary-foreground: 0 0% 100%;
+    --radius: 1.75rem;
+
+    --overlay-bg: 222 35% 9%;
+    --overlay-fg: 210 35% 95%;
+    --overlay-muted: 215 15% 62%;
+    --overlay-border: 222 20% 22%;
+    --overlay-accent: 208 75% 60%;
+  }
+
+  .dark {
+    --background: 222 35% 9%;
+    --panel: 222 26% 15%;
+    --accent-soft: 208 45% 20%;
+    --foreground: 210 35% 95%;
+    --muted-foreground: 215 15% 62%;
+    --border: 222 20% 22%;
+    --primary: 208 75% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --overlay-bg: 205 45% 97%;
+    --overlay-fg: 220 20% 10%;
+    --overlay-muted: 218 15% 55%;
+    --overlay-border: 208 35% 87%;
+    --overlay-accent: 208 55% 41%;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading), sans-serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
