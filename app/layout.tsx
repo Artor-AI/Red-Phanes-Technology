@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Inter, Sora } from 'next/font/google';
-// @ts-expect-error Next.js handles global CSS imports at build time.
 import './globals.css';
 import { Navbar } from '@/components/layout/navbar';
 import { Footer } from '@/components/layout/footer';
