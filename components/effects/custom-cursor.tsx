@@ -3,6 +3,9 @@
 import { useEffect, useState } from 'react';
 import { motion, useMotionValue, useSpring } from 'motion/react';
 
+// Change this one value to adjust the cursor color everywhere.
+const CURSOR_COLOR = '#dc2626';
+
 export function CustomCursor() {
   const [isVisible, setIsVisible] = useState(false);
   const [isPointer, setIsPointer] = useState(false);
@@ -90,7 +93,7 @@ export function CustomCursor() {
             C3.1 9.1 4.1 5.0 7.2 3.9
             Z
           "
-          fill="hsl(var(--primary))"
+          fill={CURSOR_COLOR}
         />
       </svg>
     </motion.div>
